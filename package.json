@@ -7,7 +7,15 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "(/__test__/.*|(\\.|/)(test|spec))\\.js?$"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -20,6 +28,10 @@
     "nodemon": "^2.0.15",
     "request": "^2.88.2",
     "sequelize": "^6.13.0",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "supertest": "^6.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

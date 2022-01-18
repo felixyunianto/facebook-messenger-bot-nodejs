@@ -38,6 +38,7 @@ module.exports = {
         return responseHelper(res, "Data is not available in our records", 404);
       }
     } catch (err) {
+      console.log(err);
       return responseHelper(res, "Something went wrong", 500);
     }
   },
