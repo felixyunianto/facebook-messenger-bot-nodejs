@@ -49,6 +49,7 @@ module.exports = {
       let userId = false;
       if (message === "WELCOME") {
         userController.delete(user);
+        sendMessage(user, "Hi");
       } else {
         userId = await userController.getById(user);
       }

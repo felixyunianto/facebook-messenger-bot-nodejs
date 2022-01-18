@@ -28,12 +28,12 @@ module.exports = {
   },
 
   getById: async (req, res) => {
-    const { id } = req.query;
+    const { id } = req.params;
     try {
       let message = await Message.findOne({ where: { id: id } });
 
       if (message) {
-        return responseHelper(res, "Successfully get a message", 200, response);
+        return responseHelper(res, "Successfully get a message", 200, message);
       } else {
         return responseHelper(res, "Data is not available in our records", 404);
       }

@@ -6,7 +6,7 @@ const messageRoute = require('./message');
 const messageController = require('../controllers/message');
 
 rootRoute.use('/', welcomeRoute);
-rootRoute.use('/message', messageRoute);
+rootRoute.use('/messages', messageRoute);
 rootRoute.use('/summary', messageController.summary);
 rootRoute.use('/webhook', webhookRoute);
 
