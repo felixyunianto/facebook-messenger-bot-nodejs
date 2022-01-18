@@ -57,7 +57,12 @@
    | PAGE_ACCESS_TOKEN      | Page Acces Token Facebook                                     |
    | VERIFY_TOKEN           | the token that is in the settings in the facebook application |
 
-7. Run the project   
+7. Migrate all tables to database
+   ```
+      npx sequelize db:migrate
+   ```
+
+8. Run the project   
    ```
     yarn server or npm run dev
    ```
